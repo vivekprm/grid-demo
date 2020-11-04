@@ -3,45 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.box1 {
-  background: lightcoral;
-}
-
-.box2 {
-  background: lightblue;
-}
-
-.box3 {
-  background: lightgreen;
-}
-
-main {
-  height: 100vh;
+.gallery {
   display: grid;
-  /** fr work like flex, it stretches to fill available space. **/
-  grid-template-columns: 1fr 1fr;
-  /** Takes 50% of available height i.e. 100vh **/
-  grid-template-rows: 1fr 1fr;
-  /** Telling first row first column box1, first row second column box2, 
-  second row first and second column box3. dot in second row represents empty space.**/
-  grid-template-areas:
-    "box1 box2"
-    "box3 box3";
-  justify-items: center;
-  align-items: center;
+  /** 3 columns of 300px **/
+  grid-template-columns: repeat(3, 300px);
 }
 
-.box1 {
-  grid-area: box1;
-  align-self: center;
-  justify-self: center;
-}
-
-.box2 {
-  grid-area: box2;
-}
-
-.box3 {
-  grid-area: box3;
+.gallery img {
+  width: 100%;
 }
