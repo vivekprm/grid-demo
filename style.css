@@ -5,8 +5,11 @@
 }
 .gallery {
   display: grid;
-  /** Making grid column responsive using autofill **/
-  grid-template-columns: repeat(auto-fill, 300px);
+  /** Making grid column responsive using autofill.
+    Auto fill generates empty-box if width is available.
+    To fix that use auto-fit.
+  **/
+  grid-template-columns: repeat(auto-fit, 300px);
 }
 
 .gallery img {
